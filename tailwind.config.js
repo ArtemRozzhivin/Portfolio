@@ -11,6 +11,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+			flex: {
+				'1/3': '0 0 33.333%'
+			},
 			maxWidth: {
 				'container': "1300px"
 			},
