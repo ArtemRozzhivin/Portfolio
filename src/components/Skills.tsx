@@ -16,12 +16,12 @@ const skills = [
 const Skills: React.FC = () => {
   return (
     <div className="flex">
-      <div>
+      <div className="flex-1/3">
         <img src="assets/skills.png" alt="Skills" />
       </div>
       <div>
-        <h2 className="text-orange text-5xl">My Skills</h2>
-        <p>These are technologies and tools that I use when developing projects</p>
+        <h2 className="text-orange text-5xl mb-4">My Skills</h2>
+        <p className="mb-4">These are technologies and tools that I use when developing projects</p>
         <div className="grid grid-cols-4 gap-3">
           {skills.map((obj) => (
             <SkillItem title={obj.title} img={obj.img} />
