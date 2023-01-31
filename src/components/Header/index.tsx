@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header: React.FC = () => {
   return (
-    <header className="sticky top-0 left-0 py-4 bg-header">
+    <header className="sticky top-0 left-0 py-4 bg-header xs:px-4">
       <div className="max-w-container mx-auto flex justify-between items-center">
         <h1>AR</h1>
         <nav>

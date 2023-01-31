@@ -1,13 +1,13 @@
 import React from 'react';
 import cx from 'clsx';
 
-type ButtonType = {
+interface ButtonType {
   className?: string;
   onClick?: () => void;
   children?: any;
   pirmary?: boolean;
   noBackground?: boolean;
-};
+}
 
 const Button: React.FC<ButtonType> = ({ className, children, onClick, pirmary, noBackground }) => {
   return (

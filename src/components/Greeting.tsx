@@ -6,7 +6,7 @@ const Greeting: React.FC = () => {
     <div className="flex items-center">
       <div>
         <h2 className="text-5xl">Hello, I'm -</h2>
-        <h1 className="text-7xl text-orange mb-4">Rozzhyvin Artem</h1>
+        <h1 className="text-7xl text-orange mb-4">Artem Rozzhyvin</h1>
         <p className="mb-4">
           A self-taught <span className="text-orange">front-end</span> developer with a passion for
           exploration and continual learning. I am a highly motivated person, willing to work in a

@@ -15,7 +15,7 @@ const skills = [
 
 const Skills: React.FC = () => {
   return (
-    <div className="flex">
+    <div className="flex items-center justify-between">
       <div className="flex-1/3">
         <img src="assets/skills.png" alt="Skills" />
       </div>

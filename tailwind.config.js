@@ -6,7 +6,7 @@ module.exports = {
       'xs': '320px',
       'sm': '520px',
       'md': '768px',
-      'lg': '1080px',
+      'lg': '1100px',
       'xl': '1220px',
       '2xl': '1536px',
     },
@@ -16,14 +16,16 @@ module.exports = {
 				'main': '1 0 auto'
 			},
 			maxWidth: {
-				'container': "1300px"
-			},
+				'container': "1100px"
+			}, 
 			backgroundColor: {
-				'app': "#323232",
-				'header': "#494949"
+				'app': "#0f1f38", 
+				'header': "#d44136",
 			},
 			colors:{
-				'orange': "#ff5747" 
+				'orange': "#d44136",
+				'second': "#1b4b5a"
+				
 			}
 		},
   },
