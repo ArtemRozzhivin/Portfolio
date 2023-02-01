@@ -6,25 +6,29 @@ module.exports = {
       'xs': '320px',
       'sm': '520px',
       'md': '768px',
-      'lg': '1100px',
-      'xl': '1220px',
-      '2xl': '1536px',
+      'lg': '950px',
+      'xl': '1100px',
+      '2xl': '1220px',
     },
     extend: {
 			flex: {
-				'1/3': '0 0 33.333%',
+				'1/2': '0 0 50%',
 				'main': '1 0 auto'
 			},
 			maxWidth: {
 				'container': "1100px"
 			}, 
 			backgroundColor: {
-				'app': "#0f1f38", 
-				'header': "#d44136",
+				'app': "#020917", 
+				'header': "#02161e",
 			},
+			backgroundImage: {
+        'greeting': "url('/public/assets/block1.png')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },
 			colors:{
-				'orange': "#d44136",
-				'second': "#1b4b5a"
+				'orange': "#ff665b",
+				'second': "#02161e"
 				
 			}
 		},

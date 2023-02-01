@@ -24,7 +24,7 @@ const Skills: React.FC = () => {
         <p className="mb-4">These are technologies and tools that I use when developing projects</p>
         <div className="grid grid-cols-4 gap-3">
           {skills.map((obj) => (
-            <SkillItem title={obj.title} img={obj.img} />
+            <SkillItem key={obj.title} title={obj.title} img={obj.img} />
           ))}
         </div>
       </div>

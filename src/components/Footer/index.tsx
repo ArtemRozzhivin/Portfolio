@@ -6,11 +6,8 @@ const Footer: React.FC = () => {
     <footer className="py-4 bg-header xs:px-4">
       <div className="max-w-container mx-auto flex justify-between items-center">
         <p>
-          Made by <span className="text-orange">Artem Rozzhyvin</span> — Copyright 2023
+          Made by <span className="">Artem Rozzhyvin</span> — Copyright 2023
         </p>
-        <Button noBackground>
-          <span className="ml-1">artiomrozzhyvin@gmail.com</span>
-        </Button>
         <ul className="flex gap-x-4">
           <li>
             <Button noBackground>
@@ -18,7 +15,7 @@ const Footer: React.FC = () => {
                 stroke="currentColor"
                 fill="currentColor"
                 className="w-6 h-6"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 16 16"
                 height="1em"
                 width="1em"
@@ -33,7 +30,7 @@ const Footer: React.FC = () => {
               <svg
                 stroke="currentColor"
                 fill="currentColor"
-                stroke-width="0"
+                strokeWidth="0"
                 className="w-6 h-6"
                 viewBox="0 0 16 16"
                 height="1em"
@@ -50,7 +47,7 @@ const Footer: React.FC = () => {
                 stroke="currentColor"
                 fill="currentColor"
                 className="w-6 h-6"
-                stroke-width="0"
+                strokeWidth="0"
                 viewBox="0 0 256 256"
                 xmlns="http://www.w3.org/2000/svg">
                 <path d="M227.6,58.3L179,9.6c-2.6-2.6-6.1-4-9.8-4H45.1c-11.5,0-20.8,9.3-20.8,20.8v203.3c0,11.5,9.3,20.8,20.8,20.8h165.8   c11.5,0,20.8-9.3,20.8-20.8V68C231.7,64.3,230.3,60.9,227.6,58.3z M221.5,229.6c0,5.8-4.8,10.6-10.6,10.6H45.1   c-5.8,0-10.6-4.8-10.6-10.6V26.4c0-5.8,4.8-10.6,10.6-10.6h124.2c1,0,1.9,0.4,2.6,1.1l48.6,48.6c0.7,0.7,1.1,1.6,1.1,2.6V229.6z" />

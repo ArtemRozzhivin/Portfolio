@@ -9,11 +9,11 @@ const Contacts: React.FC = () => {
       </div>
       <div>
         <h2 className="text-orange text-5xl mb-4">Contact me</h2>
-        <p className="mb-4">
+        <div className="mb-4">
           Feel free to reach me for any collaboration or work opportunities, I’m looking to
           collaborate on any exciting projects! So, you can reach me by writing an email
           artiomrozzhyvin@gmail.com
-        </p>
+        </div>
         <a href="mailto:artiomrozzhyvin@gmail.com" className="mb-4">
           <Button pirmary>
             <svg
@@ -32,6 +32,9 @@ const Contacts: React.FC = () => {
             <span className="ml-1">artiomrozzhyvin@gmail.com</span>
           </Button>
         </a>
+        <div>
+          Or you can contact me by phone number: <span className="text-orange">+380961850861</span>
+        </div>
       </div>
     </div>
   );

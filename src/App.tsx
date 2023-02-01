@@ -16,14 +16,14 @@ function App() {
         <Header />
       </div>
 
-      <div className="flex-main max-w-container mx-auto">
+      <div className="flex flex-col gap-16 my-10 max-w-container mx-auto xs:px-4 xl:px-0">
         <Greeting />
         <Skills />
         <Projects />
         <Contacts />
       </div>
 
-      <div className="flex-shrink-0">
+      <div>
         <Footer />
       </div>
     </div>
