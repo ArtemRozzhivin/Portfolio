@@ -13,10 +13,11 @@ const skills = [
   { title: 'GIT', img: 'assets/git.png' },
 ];
 
+
 const Skills: React.FC = () => {
   return (
     <div className="flex items-center gap-10 relative">
-      <div className="absolute h-[300px] w-[300px] top-10 left-0 -z-10 opacity-20 flex-1/3 md:static md:opacity-100 md:h-auto md:w-auto">
+      <div className="absolute h-[300px] w-[300px] top-[10%] left-0 -z-10 opacity-20 flex-1/3 md:static md:opacity-100 md:h-auto md:w-auto">
         <img src="assets/skills.png" alt="Skills" />
       </div>
       <div className='flex-auto'>
