@@ -17,19 +17,10 @@ const projects = [
       'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
     img: 'assets/reactSneakers.png',
     stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
-  },
-  {
-    id: '3',
-    name: 'React Sneakers',
-    desrciption:
-      'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
-    img: 'assets/reactSneakers.png',
-    stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
-  },
+  }
 ];
 
 const Projects: React.FC = () => {
-  console.log(window.screen.availWidth < 700);
   return (
     <div>
       <h2 className="text-orange text-5xl">Featured projects</h2>
