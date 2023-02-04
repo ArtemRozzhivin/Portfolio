@@ -23,7 +23,7 @@ const Skills: React.FC = () => {
       <div className='flex-auto'>
         <h2 className="text-orange text-5xl mb-4 text-right md:text-left">My Skills</h2>
         <div className="mb-4 text-right md:text-left">These are technologies and tools that I use when developing projects</div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(9rem,1fr))] gap-3">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(8rem,1fr))] gap-3">
           {skills.map((obj) => (
             <SkillItem key={obj.title} title={obj.title} img={obj.img} />
           ))}

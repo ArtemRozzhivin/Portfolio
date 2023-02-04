@@ -10,9 +10,7 @@ const Greeting: React.FC = () => {
         <p className="mb-4">
           A self-taught <span className="text-orange">front-end</span> developer with a passion for
           exploration and continual learning. I am a highly motivated person, willing to work in a
-          team or as an individual worker as well. I strive to apply my experience and skills to
-          help businesses and companies achieve its goals, creating a user-oriented digital
-          products.
+          team or as an individual worker as well.
         </p>
         <p className="mb-4">I'm currently open to new opportunities, so feel free to contact me.</p>
         <div className="flex flex-col">
@@ -37,7 +35,7 @@ const Greeting: React.FC = () => {
             </a>
           </div>
           <div>
-            <ul className="flex gap-x-4">
+            <ul className="flex gap-x-1 sm:gap-x-4">
               <li>
                 <a href="https://github.com/ArtemRozzhivin">
                   <Button noBackground>
