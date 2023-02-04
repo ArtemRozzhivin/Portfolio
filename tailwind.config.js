@@ -13,6 +13,7 @@ module.exports = {
     extend: {
 			flex: {
 				'1/2': '0 0 50%',
+				'1/3': '0 0 33.333%',
 				'main': '1 0 auto'
 			},
 			maxWidth: {

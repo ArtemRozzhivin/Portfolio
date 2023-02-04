@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectItem from '../ProjectItem';
+import ProjectItem from './ProjectItem';
 
 const projects = [
   {
@@ -8,7 +8,7 @@ const projects = [
     desrciption:
       'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
     img: 'assets/reactPizza.png',
-    stack: 'TypeScript, React, Redux Tailwind',
+    stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
   },
   {
     id: '2',
@@ -16,7 +16,7 @@ const projects = [
     desrciption:
       'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
     img: 'assets/reactSneakers.png',
-    stack: 'TypeScript, React, Redux Tailwind',
+    stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
   },
   {
     id: '3',
@@ -24,7 +24,7 @@ const projects = [
     desrciption:
       'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
     img: 'assets/reactSneakers.png',
-    stack: 'TypeScript, React, Redux Tailwind',
+    stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
   },
 ];
 
@@ -36,9 +36,9 @@ const Projects: React.FC = () => {
       <div className="my-4">
         These are my projects in which I study and improve my skills and abilities.
       </div>
-      <div className="grid gap-5 grid-cols-1">
+      <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
         {projects.map((obj) => (
-          <ProjectItem oneColumn={window.screen.availWidth < 700} key={obj.id} {...obj} />
+          <ProjectItem key={obj.id} {...obj} />
         ))}
       </div>
     </div>
