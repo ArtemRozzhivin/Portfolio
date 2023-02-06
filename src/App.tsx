@@ -4,13 +4,14 @@ import Contacts from './components/Contacts';
 import Footer from './components/Footer';
 import Greeting from './components/Greeting';
 import Header from './components/Header';
+import Navigation from './components/Navigation';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 
 function App() {
   return (
-    <div className="flex flex-col">
-      <div>
+    <div className="flex flex-col min-h-[100vh]">
+      <div className="sticky top-0 left-0 z-20">
         <Header />
       </div>
 

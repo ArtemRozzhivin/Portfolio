@@ -3,11 +3,11 @@ import Button from '../ui/Button';
 
 const Contacts: React.FC = () => {
   return (
-    <div className="flex items-center gap-10 relative mb-10">
+    <div id="contacts" className="flex items-center gap-10 relative mb-10">
       <div className="absolute h-[300px] w-[300px] top-[10%] left-0 -z-10 opacity-20 flex-1/3 md:static md:opacity-100 md:h-auto md:w-auto">
         <img src="assets/home.png" alt="Skills" />
       </div>
-      <div className='flex-auto text-right md:text-left'>
+      <div className="flex-auto text-right md:text-left">
         <h2 className="text-orange text-5xl mb-4">Contact me</h2>
         <div className="mb-4">
           Feel free to reach me for any collaboration or work opportunities, I’m looking to
@@ -32,7 +32,7 @@ const Contacts: React.FC = () => {
             <span className="ml-1">artiomrozzhyvin@gmail.com</span>
           </Button>
         </a>
-        <div className='mt-4'>
+        <div className="mt-4">
           Or you can contact me by phone number: <span className="text-orange">+380961850861</span>
         </div>
       </div>

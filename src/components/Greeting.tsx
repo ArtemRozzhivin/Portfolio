@@ -95,7 +95,7 @@ const Greeting: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="absolute h-[300px] w-[300px] top-0 right-0 -z-10 opacity-20 flex-1/2 md:static md:opacity-100 md:h-auto md:w-auto">
+      <div className="absolute h-[300px] w-[300px] top-0 right-0 -z-10 opacity-20 flex-1/3 md:static md:opacity-100 md:h-auto md:w-auto">
         <img src="assets/block1.png" alt="Greeting" />
       </div>
     </div>

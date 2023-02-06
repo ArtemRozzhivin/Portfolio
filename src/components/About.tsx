@@ -2,7 +2,7 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <div className="flex items-center relative">
+    <div id="about" className="flex items-center relative">
       <div className="absolute h-[300px] w-[300px] xs:top-[20%] xs:-left-7 sm:top-[5%] left-0 -z-10 opacity-20 flex-1/3 md:static md:opacity-100 md:h-auto md:w-auto ">
         <img src="assets/contact.png" alt="Contact" />
       </div>

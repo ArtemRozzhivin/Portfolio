@@ -15,7 +15,7 @@ const skills = [
 
 const Skills: React.FC = () => {
   return (
-    <div className="flex items-center gap-10 relative">
+    <div id="skills" className="flex items-center gap-10 relative">
       <div className="flex-auto">
         <h2 className="text-orange text-5xl mb-4">My Skills</h2>
         <div className="mb-4">
