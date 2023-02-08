@@ -15,6 +15,8 @@ function App() {
         <Header />
       </div>
 
+      {/* https://stackoverflow.com/questions/48223566/using-anchor-tags-in-react-router-4  - anchor links*/}
+
       <div className="flex flex-col gap-16 my-10 max-w-container mx-auto xs:px-4 xl:px-0">
         <Greeting />
         <About />
