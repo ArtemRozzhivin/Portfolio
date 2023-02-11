@@ -6,11 +6,10 @@ import { scrollWithOffset } from '../../utils/scrollWithOffset';
 import Button from '../../ui/Button';
 
 interface HeaderInterface {
-  visibleBurger: boolean;
   onClickBurger: () => void;
 }
 
-const Header: React.FC<HeaderInterface> = ({ visibleBurger, onClickBurger }) => {
+const Header: React.FC<HeaderInterface> = ({ onClickBurger }) => {
   return (
     <header className="w-full py-4 bg-header xs:px-4">
       <div className="max-w-container mx-auto flex justify-between items-center">

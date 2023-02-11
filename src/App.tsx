@@ -23,24 +23,8 @@ function App() {
   return (
     <div className="flex flex-col min-h-[100vh]">
       <div className="sticky top-0 left-0 z-20">
-        <Header visibleBurger={visibleBurger} onClickBurger={onClickBurger} />
+        <Header onClickBurger={onClickBurger} />
       </div>
-
-      {/* {visibleBurger ? (
-        <div className="flex-auto">
-          <Navigation />
-        </div>
-      ) : (
-        <>
-          <div className="flex flex-col gap-16 my-10 max-w-container mx-auto xs:px-4 xl:px-0">
-            <Greeting />
-            <About />
-            <Skills />
-            <Projects />
-            <Contacts />
-          </div>
-        </>
-      )} */}
 
       {visibleBurger && <Navigation onClickBurger={onClickBurger} />}
 
