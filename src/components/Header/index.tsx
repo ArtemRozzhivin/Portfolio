@@ -1,44 +1,46 @@
 import React from 'react';
 import Burger from '../../ui/Burger';
 import { HashLink } from 'react-router-hash-link';
-import Navigation from '../Navigation';
+import Navigation, { navSection } from '../Navigation';
+import { scrollWithOffset } from '../../utils/scrollWithOffset';
+import Button from '../../ui/Button';
 
-const Header: React.FC = () => {
-  const scrollWithOffset = (el: any) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -70;
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
-  };
+interface HeaderInterface {
+  visibleBurger: boolean;
+  onClickBurger: () => void;
+}
 
+const Header: React.FC<HeaderInterface> = ({ visibleBurger, onClickBurger }) => {
   return (
     <header className="w-full py-4 bg-header xs:px-4">
       <div className="max-w-container mx-auto flex justify-between items-center">
         <h1 className="text-2xl">ARPortfolio</h1>
         <div className="block sm:hidden">
-          <Burger />
+          <Button onClick={onClickBurger} noBackground>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-6 h-6">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </Button>
         </div>
         <nav className="xs:hidden sm:block">
           <ul className="flex gap-x-5 text-base">
-            <li>
-              <HashLink scroll={(el) => scrollWithOffset(el)} to="#about">
-                About
-              </HashLink>
-            </li>
-            <li>
-              <HashLink scroll={(el) => scrollWithOffset(el)} to="#skills">
-                Skills
-              </HashLink>
-            </li>
-            <li>
-              <HashLink scroll={(el) => scrollWithOffset(el)} to="#projects">
-                Projects
-              </HashLink>
-            </li>
-            <li>
-              <HashLink scroll={(el) => scrollWithOffset(el)} to="#contacts">
-                Contact
-              </HashLink>
-            </li>
+            {navSection.map((elem) => (
+              <li>
+                <HashLink to={'#' + elem.id} scroll={(el) => scrollWithOffset(el)}>
+                  {elem.name}
+                </HashLink>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

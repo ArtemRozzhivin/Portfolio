@@ -5,10 +5,10 @@ import Header from '../components/Header';
 const MainLayout: React.FC = () => {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <div className="max-w-container mx-auto xs:px-4">
         <Header />
-      </div>
+      </div> */}
     </div>
   );
 };
