@@ -7,9 +7,17 @@ interface ButtonType {
   children?: any;
   pirmary?: boolean;
   noBackground?: boolean;
+  none?: boolean;
 }
 
-const Button: React.FC<ButtonType> = ({ className, children, onClick, pirmary, noBackground }) => {
+const Button: React.FC<ButtonType> = ({
+  className,
+  children,
+  onClick,
+  pirmary,
+  noBackground,
+  none,
+}) => {
   return (
     <button
       className={cx(
@@ -17,6 +25,7 @@ const Button: React.FC<ButtonType> = ({ className, children, onClick, pirmary, n
         {
           'p-3 bg-orange rounded-2xl hover:brightness-75': pirmary,
           'rounded-xl p-1 hover:bg-orange': noBackground,
+          ' hover:bg-none active:bg-inherit focus:bg-inherit': none,
         },
         className,
       )}

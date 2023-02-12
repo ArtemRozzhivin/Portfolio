@@ -9,6 +9,11 @@ const projects = [
       'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
     img: 'assets/reactPizza.png',
     stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
+    links: {
+      github: 'https://github.com/ArtemRozzhivin/ReactPizzaRemastered.git',
+      preview: 'https://react-pizza-remastered.vercel.app/',
+    },
+    view: 1,
   },
   {
     id: '2',
@@ -17,6 +22,11 @@ const projects = [
       'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
     img: 'assets/reactSneakers.png',
     stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
+    links: {
+      github: 'https://github.com/ArtemRozzhivin/ReactSneakers.git',
+      preview: 'https://react-sneakers-six.vercel.app/',
+    },
+    view: 0,
   },
 ];
 

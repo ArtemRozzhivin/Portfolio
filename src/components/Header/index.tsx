@@ -13,9 +13,10 @@ const Header: React.FC<HeaderInterface> = ({ onClickBurger }) => {
   return (
     <header className="w-full py-4 bg-header xs:px-4">
       <div className="max-w-container mx-auto flex justify-between items-center">
-        <h1 className="text-2xl">ARPortfolio</h1>
-        <div className="block sm:hidden">
-          <Button onClick={onClickBurger} noBackground>
+        <div className="flex justify-between items-center w-full">
+          <h1 className="text-2xl">ARPortfolio</h1>
+
+          <Button className="block sm:hidden" onClick={onClickBurger} none>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
