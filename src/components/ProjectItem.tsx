@@ -75,7 +75,7 @@ const ProjectItem: React.FC<ProjectItemType> = ({
         </div>
         <div className="hidden lg:p-0 lg:block flex-1/2 min-h-[300px] overflow-hidden relative">
           <img
-            className="max-w-full rounded-lg w-full h-full object-contain absolute top-0 left-0 group-hover:scale-125"
+            className="max-w-full rounded-lg w-full h-full object-cover absolute top-0 left-0 group-hover:scale-125"
             src={img}
             alt="Sneakers Project"
           />

@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Button from '../ui/Button';
 
 const Contacts: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+  const copyTimerRef = useRef(0);
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(copyTimerRef.current);
+    };
+  }, []);
+
+  const setToClipboard = (value: string) => {
+    if (!copied) {
+      navigator.clipboard.writeText(value);
+      setCopied(true);
+      copyTimerRef.current = window.setTimeout(() => {
+        setCopied(false);
+      }, 2000);
+    }
+  };
+
   return (
     <div id="contacts" className="flex items-center gap-10 relative mb-10">
       <div className="absolute h-[300px] w-[300px] top-[10%] left-0 -z-10 opacity-20 flex-1/3 md:static md:opacity-100 md:h-auto md:w-auto">
@@ -32,8 +51,29 @@ const Contacts: React.FC = () => {
             <span className="ml-1">artiomrozzhyvin@gmail.com</span>
           </Button>
         </a>
-        <div className="mt-4">
-          Or you can contact me by phone number: <span className="text-orange">+380961850861</span>
+        <div className="flex items-center mt-4">
+          Or you can contact me by phone number:
+          <Button
+            onClick={() => setToClipboard('+380961850861')}
+            className="relative ml-3 p-1"
+            border>
+            +380961850861
+            {copied && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                className="ml-1 w-6 h-6">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"
+                />
+              </svg>
+            )}
+          </Button>
         </div>
       </div>
     </div>

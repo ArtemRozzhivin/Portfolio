@@ -36,7 +36,10 @@ const Header: React.FC<HeaderInterface> = ({ onClickBurger }) => {
           <ul className="flex gap-x-5 text-base">
             {navSection.map((elem) => (
               <li>
-                <HashLink to={'#' + elem.id} scroll={(el) => scrollWithOffset(el)}>
+                <HashLink
+                  className="p-2 hover:bg-orange rounded-2xl"
+                  to={'#' + elem.id}
+                  scroll={(el) => scrollWithOffset(el)}>
                   {elem.name}
                 </HashLink>
               </li>

@@ -7,6 +7,7 @@ interface ButtonType {
   children?: any;
   pirmary?: boolean;
   noBackground?: boolean;
+  border?: boolean;
   none?: boolean;
 }
 
@@ -15,6 +16,7 @@ const Button: React.FC<ButtonType> = ({
   children,
   onClick,
   pirmary,
+  border,
   noBackground,
   none,
 }) => {
@@ -25,6 +27,8 @@ const Button: React.FC<ButtonType> = ({
         {
           'p-3 bg-orange rounded-2xl hover:brightness-75': pirmary,
           'rounded-xl p-1 hover:bg-orange': noBackground,
+          'p-2 border-solid border-2 text-orange rounded-2xl border-orange hover:text-white hover:bg-orange transition-all':
+            border,
           ' hover:bg-none active:bg-inherit focus:bg-inherit': none,
         },
         className,
