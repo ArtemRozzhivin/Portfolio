@@ -51,7 +51,7 @@ const Contacts: React.FC = () => {
             <span className="ml-1">artiomrozzhyvin@gmail.com</span>
           </Button>
         </a>
-        <div className="flex items-center mt-4">
+        <div className="mt-4 ">
           Or you can contact me by phone number:
           <Button
             onClick={() => setToClipboard('+380961850861')}
