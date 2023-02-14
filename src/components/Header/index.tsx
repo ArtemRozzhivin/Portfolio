@@ -52,7 +52,7 @@ const Header: React.FC<HeaderInterface> = ({ visibleBurger, onClickBurger }) => 
             {navSection.map((elem) => (
               <li>
                 <HashLink
-                  className="p-2 hover:bg-orange rounded-2xl"
+                  className="p-2 hover:bg-orange rounded-2xl transition-all"
                   to={'#' + elem.id}
                   scroll={(el) => scrollWithOffset(el)}>
                   {elem.name}

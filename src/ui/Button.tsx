@@ -23,7 +23,7 @@ const Button: React.FC<ButtonType> = ({
   return (
     <button
       className={cx(
-        'inline-flex justify-center items-center',
+        'inline-flex justify-center items-center transition-all',
         {
           'p-3 bg-orange rounded-2xl hover:brightness-75': pirmary,
           'rounded-xl p-1 hover:bg-orange': noBackground,
