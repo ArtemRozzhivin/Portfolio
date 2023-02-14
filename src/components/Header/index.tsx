@@ -15,7 +15,9 @@ const Header: React.FC<HeaderInterface> = ({ visibleBurger, onClickBurger }) => 
     <header className="w-full py-4 bg-header xs:px-4">
       <div className="max-w-container mx-auto flex justify-between items-center">
         <div className="flex justify-between items-center w-full">
-          <h1 className="text-2xl">ARPortfolio</h1>
+          <HashLink className="text-2xl" to={'#greeting'} scroll={(el) => scrollWithOffset(el)}>
+            ARPortfolio
+          </HashLink>
 
           <Button className="block sm:hidden" onClick={onClickBurger} none>
             {visibleBurger ? (

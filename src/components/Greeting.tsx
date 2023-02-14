@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 
 const Greeting: React.FC = () => {
   return (
-    <div className="flex items-center justify-center relative">
+    <div id="greeting" className="flex items-center justify-center relative">
       <div>
         <h2 className="text-3xl lg:text-5xl">Hello, I'm -</h2>
         <h1 className="text-4xl lg:text-7xl text-orange mb-4">Artem Rozzhyvin</h1>

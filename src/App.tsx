@@ -1,3 +1,4 @@
+import { motion, useScroll, useSpring } from 'framer-motion';
 import React, { useState } from 'react';
 import About from './components/About';
 import Contacts from './components/Contacts';
@@ -20,11 +21,23 @@ function App() {
     }
   };
 
+
+		const { scrollYProgress } = useScroll();
+		const scaleX = useSpring(scrollYProgress, {
+			stiffness: 100,
+			damping: 10,
+			restDelta: 0.001
+		});
+	
+
   return (
     <div className="flex flex-col min-h-[100vh]">
       <div className="sticky top-0 left-0 z-20">
         <Header visibleBurger={visibleBurger} onClickBurger={onClickBurger} />
+			<motion.div className="fixed top-19 left-0 h-2 w-full bg-orange origin-[0%]" style={{ scaleX }} />
       </div>
+
+
 
       <Navigation visibleBurger={visibleBurger} onClickBurger={onClickBurger} />
 
