@@ -11,11 +11,10 @@ const Greeting: React.FC = () => {
         <h2 className="text-3xl lg:text-5xl">{t('greeting.title')}</h2>
         <h1 className="text-4xl lg:text-7xl text-orange mb-4">{t('greeting.name')}</h1>
         <p className="mb-4">
-          A self-taught <span className="text-orange">front-end</span> developer with a passion for
-          exploration and continual learning. I am a highly motivated person, willing to work in a
-          team or as an individual worker as well.
+          {t('greeting.main.part1')} <span className="text-orange">front-end</span>{' '}
+          {t('greeting.main.part2')}
         </p>
-        <p className="mb-4">I'm currently open to new opportunities, so feel free to contact me.</p>
+        <p className="mb-4">{t('greeting.contact')}</p>
         <div className="flex flex-col">
           <div className="mb-4">
             <a href="mailto:artiomrozzhyvin@gmail.com">

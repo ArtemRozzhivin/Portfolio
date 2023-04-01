@@ -1,12 +1,12 @@
 import React from 'react';
 import ProjectItem from './ProjectItem';
+import { useTranslation } from 'react-i18next';
 
 const projects = [
   {
     id: 1,
     name: 'React Pizza',
-    desrciption:
-      'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
+    desrciption: 'reactPizza',
     img: 'assets/reactPizza.png',
     stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
     links: {
@@ -17,8 +17,7 @@ const projects = [
   {
     id: 2,
     name: 'React Sneakers',
-    desrciption:
-      'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
+    desrciption: 'reactSneakers',
     img: 'assets/reactSneakers.png',
     stack: ['TypeScript', 'React', 'Redux', 'Tailwind'],
     links: {
@@ -26,16 +25,15 @@ const projects = [
       preview: 'https://react-sneakers-six.vercel.app/',
     },
   },
-
 ];
 
 const Projects: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="projects">
-      <h2 className="text-orange text-5xl">Featured projects</h2>
-      <div className="my-4">
-        These are my projects in which I study and improve my skills and abilities.
-      </div>
+      <h2 className="text-orange text-5xl">{t('projects.title')}</h2>
+      <div className="my-4">{t('projects.main')}</div>
       <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
         {projects.map((obj) => (
           <ProjectItem key={obj.id} {...obj} />

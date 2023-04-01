@@ -2,11 +2,33 @@
   "greeting": {
     "title": "Hello, I'm - ",
     "name": "Artem Rozzhyvin",
-    "main": "A self-taught front-end developer with a passion for exploration and continual learning. I am a highly motivated person, willing to work in a team or as an individual worker as well.",
+    "main": {
+      "part1": "A self-taught",
+      "part2": "developer with a passion for exploration and continual learning. I am a highly motivated person, willing to work in a team or as an individual worker as well."
+    },
     "contact": "I'm currently open to new opportunities, so feel free to contact me."
   },
   "about": {
     "title": "About me",
-    "main": "Hello everybody! My name is Artem, I am an ambitious front-end developer from Ukraine. Every day I learn something new, improve my skills in practice and theory. I strive to apply my experience and skills to help businesses and companies achieve their goals by creating user-centric digital products. In my free time from the code, I spend it with my family, friends, watching series or shows about travel. I also like to read some non-fiction books, especially on the topic of psychology."
+    "main": {
+      "part1": "Hello everybody! My name is Artem, I am an ambitious",
+      "part2": "developer from Ukraine. Every day I learn something new, improve my skills in practice and theory. I strive to apply my experience and skills to help businesses and companies achieve their goals by creating user-centric digital products.",
+      "part3": "In my free time from the code, I spend it with my family, friends, watching series or shows about travel. I also like to read some non-fiction books, especially on the topic of psychology."
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "main": "These are technologies and tools that I use when developing projects"
+  },
+  "projects": {
+    "title": "Featured projects",
+    "main": "These are my projects in which I study and improve my skills and abilities.",
+    "reactPizza": "The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service.",
+    "reactSneakers": "The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service."
+  },
+  "contact": {
+    "title": "Contact me",
+    "main": "Feel free to reach me for any collaboration or work opportunities, I’m looking to collaborate on any exciting projects! So, you can reach me by writing an email artiomrozzhyvin@gmail.com",
+    "phone": "Or you can contact me by phone number"
   }
 }

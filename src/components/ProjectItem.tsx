@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillItem from './SkillItem';
+import { useTranslation } from 'react-i18next';
 
 interface ProjectItemType {
   className?: string;
@@ -20,6 +21,8 @@ const ProjectItem: React.FC<ProjectItemType> = ({
   stack,
   links,
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="p-5 bg-second rounded-lg group">
       <div className="flex gap-5 flex-col justify-center items-center lg:flex-row">
@@ -64,7 +67,7 @@ const ProjectItem: React.FC<ProjectItemType> = ({
               alt="Sneakers Project"
             />
           </div>
-          <div className="mb-3">{desrciption}</div>
+          <div className="mb-3">{t(`projects.${desrciption}`)}</div>
           <div className="flex flex-wrap gap-1">
             {stack.map((name) => (
               <SkillItem key={name} className="bg-app" title={name} />

@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillItem from './SkillItem';
+import { useTranslation } from 'react-i18next';
 
 const skills = [
   { title: 'JavaScript', img: 'assets/javascript.png' },
@@ -14,13 +15,12 @@ const skills = [
 ];
 
 const Skills: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div id="skills" className="flex items-center gap-10 relative">
       <div className="flex-auto">
-        <h2 className="text-orange text-5xl mb-4">My Skills</h2>
-        <div className="mb-4">
-          These are technologies and tools that I use when developing projects
-        </div>
+        <h2 className="text-orange text-5xl mb-4">{t('skills.title')}</h2>
+        <div className="mb-4">{t('skills.main')}</div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(8rem,1fr))] gap-3">
           {skills.map((obj) => (
             <SkillItem key={obj.title} title={obj.title} img={obj.img} />

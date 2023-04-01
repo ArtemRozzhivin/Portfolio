@@ -13,13 +13,11 @@ const About: React.FC = () => {
         <h2 className="text-orange text-5xl mb-4">{t('about.title')}</h2>
         <div>
           <p className="mb-4">
-            Hello everybody! My name is Artem, I am an ambitious
-            <span className="text-orange"> front-end</span> developer from Ukraine. Every day I
-            learn something new, improve my skills in practice and theory. I strive to apply my
-            experience and skills to help businesses and companies achieve their goals by creating
-            user-centric digital products.
+            {t('about.main.part1')}
+            <span className="text-orange"> front-end </span>
+            {t('about.main.part2')}
           </p>
-          <p>{t('about.main')}</p>
+          <p>{t('about.main.part3')}</p>
         </div>
       </div>
     </div>

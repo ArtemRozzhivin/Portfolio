@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Button from '../ui/Button';
+import { useTranslation } from 'react-i18next';
 
 const Contacts: React.FC = () => {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
   const copyTimerRef = useRef(0);
 
@@ -27,12 +29,8 @@ const Contacts: React.FC = () => {
         <img src="assets/home.png" alt="Skills" />
       </div>
       <div className="flex-auto text-right md:text-left">
-        <h2 className="text-orange text-5xl mb-4">Contact me</h2>
-        <div className="mb-4">
-          Feel free to reach me for any collaboration or work opportunities, I’m looking to
-          collaborate on any exciting projects! So, you can reach me by writing an email
-          artiomrozzhyvin@gmail.com
-        </div>
+        <h2 className="text-orange text-5xl mb-4">{t('contact.title')}</h2>
+        <div className="mb-4">{t('contact.main')}</div>
         <a href="mailto:artiomrozzhyvin@gmail.com" className="mb-4">
           <Button pirmary>
             <svg
@@ -52,7 +50,7 @@ const Contacts: React.FC = () => {
           </Button>
         </a>
         <div className="mt-4 ">
-          Or you can contact me by phone number:
+          {t('contact.phone')}:
           <Button
             onClick={() => setToClipboard('+380961850861')}
             className="relative ml-3 p-1"
