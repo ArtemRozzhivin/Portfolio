@@ -3,7 +3,7 @@ import ProjectItem from './ProjectItem';
 
 const projects = [
   {
-    id: '1',
+    id: 1,
     name: 'React Pizza',
     desrciption:
       'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
@@ -13,10 +13,9 @@ const projects = [
       github: 'https://github.com/ArtemRozzhivin/ReactPizzaRemastered.git',
       preview: 'https://react-pizza-remastered.vercel.app/',
     },
-    view: 1,
   },
   {
-    id: '2',
+    id: 2,
     name: 'React Sneakers',
     desrciption:
       'The site is an online store selling sneakers. The site has several pages: main, shopping cart, favorites, purchased. The site also has animations and is fully responsive. A fake api was used on the motskapi service',
@@ -26,8 +25,8 @@ const projects = [
       github: 'https://github.com/ArtemRozzhivin/ReactSneakers.git',
       preview: 'https://react-sneakers-six.vercel.app/',
     },
-    view: 0,
   },
+
 ];
 
 const Projects: React.FC = () => {

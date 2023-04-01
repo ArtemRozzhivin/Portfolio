@@ -25,10 +25,10 @@ const Header: React.FC<HeaderInterface> = ({ visibleBurger, onClickBurger }) => 
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
                 className="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
               <svg
@@ -50,7 +50,7 @@ const Header: React.FC<HeaderInterface> = ({ visibleBurger, onClickBurger }) => 
         <nav className="xs:hidden sm:block">
           <ul className="flex gap-x-5 text-base">
             {navSection.map((elem) => (
-              <li>
+              <li key={elem.id}>
                 <HashLink
                   className="p-2 hover:bg-orange rounded-2xl transition-all"
                   to={'#' + elem.id}

@@ -1,12 +1,15 @@
 import React from 'react';
 import Button from '../ui/Button';
+import { useTranslation } from 'react-i18next';
 
 const Greeting: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="greeting" className="flex items-center justify-center relative">
       <div>
-        <h2 className="text-3xl lg:text-5xl">Hello, I'm -</h2>
-        <h1 className="text-4xl lg:text-7xl text-orange mb-4">Artem Rozzhyvin</h1>
+        <h2 className="text-3xl lg:text-5xl">{t('greeting.title')}</h2>
+        <h1 className="text-4xl lg:text-7xl text-orange mb-4">{t('greeting.name')}</h1>
         <p className="mb-4">
           A self-taught <span className="text-orange">front-end</span> developer with a passion for
           exploration and continual learning. I am a highly motivated person, willing to work in a
