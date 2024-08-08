@@ -29,23 +29,36 @@ function App() {
   });
 
   return (
-    <div className="flex flex-col min-h-[100vh]">
-      <div className="sticky top-0 left-0 z-20">
+    <div className='flex flex-col min-h-[100vh]'>
+      <div className='sticky top-0 left-0 z-20'>
         <Header visibleBurger={visibleBurger} onClickBurger={onClickBurger} />
         <motion.div
-          className="fixed top-19 left-0 h-2 w-full bg-orange origin-[0%]"
+          className='fixed top-19 left-0 h-2 w-full bg-orange origin-[0%]'
           style={{ scaleX }}
         />
       </div>
 
       <Navigation visibleBurger={visibleBurger} onClickBurger={onClickBurger} />
 
-      <div className="flex flex-col gap-16 my-10 max-w-container mx-auto xs:px-4 xl:px-0">
+      <div className='flex flex-col gap-16 my-10 max-w-container mx-auto xs:px-4 xl:px-0'>
         <Greeting />
+
         <About />
-        <Skills />
+        <motion.div
+          initial={{ y: '100%', opacity: 0 }}
+          whileInView={{ y: '0%', opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}>
+          <Skills />
+        </motion.div>
         <Projects />
-        <Contacts />
+        <motion.div
+          initial={{ x: '-100%', opacity: 0 }}
+          whileInView={{ x: '0%', opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}>
+          <Contacts />
+        </motion.div>
       </div>
 
       <div>
