@@ -7,10 +7,14 @@ import './18n';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
-  <Suspense fallback={<div>Loding...</div>}>
+  <Suspense
+    fallback={
+      <div className='w-screen h-screen flex justify-center items-center'>
+        <div className='text-2xl'>Loding...</div>
+      </div>
+    }>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-    ,
   </Suspense>,
 );

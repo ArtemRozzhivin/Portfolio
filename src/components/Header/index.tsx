@@ -20,50 +20,53 @@ const Header: React.FC<HeaderInterface> = ({ visibleBurger, onClickBurger }) => 
   };
 
   return (
-    <header className="w-full py-4 bg-header xs:px-4">
-      <div className="max-w-container mx-auto flex justify-between items-center">
-        <div className="flex justify-between items-center w-full">
-          <HashLink className="text-2xl" to={'#greeting'} scroll={(el) => scrollWithOffset(el)}>
+    <header className='w-full py-4 bg-header xs:px-4'>
+      <div className='max-w-container mx-auto flex justify-between items-center'>
+        <div className='flex justify-between items-center w-full'>
+          <HashLink
+            className='p-2 text-2xl relative hover:text-orange cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-orange before:origin-center before:h-[2px] before:w-0 hover:before:w-[100%] before:bottom-0 before:left-0'
+            to={'#greeting'}
+            scroll={(el) => scrollWithOffset(el)}>
             ARPortfolio
           </HashLink>
 
-          <Button className="block sm:hidden" onClick={onClickBurger} none>
+          <Button className='block sm:hidden' onClick={onClickBurger} none>
             {visibleBurger ? (
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth='1.5'
+                stroke='currentColor'
+                className='w-6 h-6'>
+                <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
               </svg>
             ) : (
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="w-6 h-6">
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                strokeWidth='1.5'
+                stroke='currentColor'
+                className='w-6 h-6'>
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
                 />
               </svg>
             )}
           </Button>
         </div>
-        <nav className="xs:hidden sm:block">
-          <ul className="flex gap-x-5 text-base items-center">
-            <div className="flex-grow w-auto">
+        <nav className='xs:hidden sm:block'>
+          <ul className='flex gap-x-5 text-base items-center'>
+            <div className='flex-grow w-auto'>
               <SortPopup />
             </div>
             {navSection.map((elem) => (
               <li key={elem.id}>
                 <HashLink
-                  className="py-2 px-4 bg-app hover:bg-orange rounded-md transition-all"
+                  className='relative hover:text-orange cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-orange before:origin-center before:h-[2px] before:w-0 hover:before:w-[100%] before:bottom-0 before:left-0'
                   to={'#' + elem.id}
                   scroll={(el) => scrollWithOffset(el)}>
                   {elem.name}
